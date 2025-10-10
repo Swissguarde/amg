@@ -25,7 +25,7 @@ export default function RootLayout({
       <body className={`${newsreader.variable} antialiased`}>
         <PageTransition>
           <Header />
-          <main className="">{children}</main>
+          <main className="mt-18">{children}</main>
           <Footer />
         </PageTransition>
       </body>

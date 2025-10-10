@@ -4,11 +4,11 @@ import Link from "next/link";
 
 export default function WorksPage() {
   return (
-    <div className="px-8 py-20">
+    <div className="px-4 py-10 md:px-8 md:py-20">
       <PageSectionNav />
 
-      <div className="mt-20">
-        <div className="grid w-full grid-cols-2 items-center justify-center gap-x-3 gap-y-10">
+      <div className="mt-10 md:mt-20">
+        <div className="grid w-full grid-cols-1 items-center justify-center gap-x-3 gap-y-8 md:grid-cols-2 md:gap-y-10">
           {projects.map((project, i) => (
             <Link href={project.href} key={i} className="flex-1">
               <div className="overflow-hidden rounded-2xl">
@@ -18,18 +18,20 @@ export default function WorksPage() {
                   width={0}
                   height={0}
                   sizes="100vw"
-                  className="h-[600px] w-full object-cover transition-transform duration-500 ease-in-out hover:scale-110"
+                  className="h-[300px] w-full object-cover transition-transform duration-500 ease-in-out hover:scale-110 md:h-[600px]"
                 />
               </div>
 
               <div className="mt-3 flex flex-col gap-1">
-                <h2 className="text-xl">{project.title}</h2>
-                <div className="flex items-center gap-3 text-base text-gray-500">
+                <h2 className="text-lg md:text-xl">{project.title}</h2>
+                <div className="flex flex-wrap items-center gap-2 text-sm text-gray-500 md:gap-3 md:text-base">
                   {project.tags.map((tag, i) => (
-                    <div key={i} className="flex items-center gap-3">
+                    <div key={i} className="flex items-center gap-2 md:gap-3">
                       <p key={tag}>{tag}</p>
                       {i !== project.tags.length - 1 && (
-                        <span className="text-2xl text-gray-300">•</span>
+                        <span className="text-xl text-gray-300 md:text-2xl">
+                          •
+                        </span>
                       )}
                     </div>
                   ))}

@@ -45,8 +45,76 @@ export default function WorkDetailPage() {
     ],
   });
   return (
-    <section className="py-32">
-      <div className="flex items-start justify-between px-8">
+    <section className="py-16 md:py-32">
+      {/* Mobile Layout */}
+      <div className="flex flex-col gap-8 px-4 md:hidden">
+        <div className="flex items-center justify-between">
+          <div className="rounded-full bg-white p-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+              />
+            </svg>
+          </div>
+          <div>
+            <Link
+              ref={viewWorkRef}
+              href="https://www.ayolawal.com"
+              className="relative flex items-center gap-2"
+            >
+              <span className="font-mono text-sm">Live Site</span>
+              <svg
+                ref={viewWorkArrowRef}
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="size-4"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                />
+              </svg>
+              <div
+                ref={viewWorkUnderlineRef}
+                className="absolute bottom-0 left-0 h-[1px] w-full bg-current"
+              />
+            </Link>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-2 gap-6">
+          <div className="flex flex-col gap-2">
+            <h2 className="text-sm text-gray-400">Client</h2>
+            <p className="text-sm">The Ayo Lawal Empowering Foundation</p>
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <h2 className="text-sm text-gray-400">Date</h2>
+            <p className="text-sm">2025</p>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <h2 className="text-sm text-gray-400">Services</h2>
+          <p className="text-sm">Branding / UX/UI Design / Social Media</p>
+        </div>
+      </div>
+
+      {/* Desktop Layout */}
+      <div className="hidden items-start justify-between px-8 md:flex">
         <div className="rounded-full bg-white p-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -112,8 +180,8 @@ export default function WorkDetailPage() {
         </div>
       </div>
 
-      <div className="mt-40">
-        <h2 className="float-end mb-10 max-w-3xl pr-8 text-6xl leading-20 text-gray-700">
+      <div className="mt-20 md:mt-40">
+        <h2 className="mb-10 max-w-3xl px-4 text-3xl leading-tight text-gray-700 md:float-end md:pr-8 md:text-6xl md:leading-20">
           The Ayo Lawal Empowering Foundation
         </h2>
 
@@ -123,20 +191,21 @@ export default function WorkDetailPage() {
           width={0}
           height={0}
           sizes="100vw"
-          className="h-screen w-full object-cover"
+          className="h-[50vh] w-full object-cover md:h-screen"
         />
 
-        <div className="my-20 flex items-start justify-between gap-10 px-8">
+        <div className="my-10 flex flex-col gap-6 px-4 md:my-20 md:flex-row md:items-start md:justify-between md:gap-10 md:px-8">
           <div className="flex items-center gap-1">
-            <span className="text-xl text-gray-400">•</span>
-            <p>Project Overview</p>
+            <span className="text-lg text-gray-400 md:text-xl">•</span>
+            <p className="text-sm md:text-base">Project Overview</p>
           </div>
 
-          <p className="max-w-4xl text-5xl text-gray-500">
+          <p className="text-lg text-gray-500 md:max-w-4xl md:text-5xl">
             The Ayo Lawal Empowering Foundation is a non-profit organization
             that provides education and training to young people in Nigeria.
           </p>
         </div>
+
         <Carousel setApi={setApi} className="mx-auto mt-10 w-full max-w-[90vw]">
           <CarouselContent>
             {Array.from({ length: 5 }).map((_, index) => (
@@ -149,7 +218,7 @@ export default function WorkDetailPage() {
                       width={0}
                       height={0}
                       sizes="100vw"
-                      className="h-[70vh] w-full rounded-sm object-contain"
+                      className="h-[40vh] w-full rounded-sm object-contain md:h-[70vh]"
                     />
                   </div>
                 </div>

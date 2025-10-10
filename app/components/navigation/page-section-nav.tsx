@@ -14,15 +14,15 @@ export default function PageSectionNav() {
   if (!displayLink) return null;
 
   return (
-    <section className="flex items-center gap-4">
-      <div className="flex w-fit cursor-pointer items-center justify-center rounded-full bg-white p-8">
+    <section className="flex items-center gap-2 md:gap-4">
+      <div className="flex w-fit cursor-pointer items-center justify-center rounded-full bg-white p-4 md:p-8">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="size-10 text-gray-400"
+          className="size-6 text-gray-400 md:size-10"
         >
           <path
             strokeLinecap="round"
@@ -32,11 +32,11 @@ export default function PageSectionNav() {
         </svg>
       </div>
 
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-2 md:gap-3">
         <Link href={displayLink.href} key={displayLink.name}>
-          <h2 className="relative text-[200px] tracking-wide text-gray-700">
+          <h2 className="relative text-[60px] leading-[0.9] tracking-wide text-gray-700 md:text-[200px] md:leading-normal">
             {displayLink.name}
-            <span className="absolute top-10 -right-20 text-5xl">
+            <span className="absolute top-2 -right-8 text-xl md:top-10 md:-right-20 md:text-5xl">
               0{displayLink.supNumber}
             </span>
           </h2>

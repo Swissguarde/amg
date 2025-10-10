@@ -7,6 +7,7 @@ import { Link as ScrollLink } from "react-scroll";
 import WorkSection from "./components/hero/work-section";
 import ProcessSection from "./sections/process-section";
 import ClosingSection from "./components/hero/closing";
+import CTA from "./components/cta";
 
 export default function Home() {
   const scrollLinkRef = useRef<HTMLDivElement>(null);
@@ -79,12 +80,17 @@ export default function Home() {
   return (
     <ReactLenis root>
       <section>
-        <div className="relative grid h-screen w-full grid-cols-[6fr_4fr] gap-4 bg-[#D5C8B0]">
-          <div className="flex flex-col items-start justify-center gap-10 p-8">
-            <h2 className="max-w-2xl text-7xl leading-16 text-gray-800">
+        <div className="relative flex h-screen w-full flex-col bg-[#D5C8B0] md:grid md:grid-cols-[6fr_4fr] md:gap-4">
+          <div className="flex h-[60%] flex-col items-start justify-center gap-10 p-8 md:h-full">
+            <h2 className="text-4xl text-gray-800 md:max-w-2xl md:text-7xl md:leading-16">
               Crafting digital experiences that attract, convert, and grow your
               business
             </h2>
+            <p className="text-gray-600 md:max-w-2xl">
+              We specialize in bespoke UX/UI design, branding, and blending
+              artistry with innovation to craft scalable, impactful designs that
+              resonate with users and grow with the business
+            </p>
 
             <ScrollLink to="work" smooth={true} duration={500}>
               <div
@@ -111,9 +117,9 @@ export default function Home() {
             </ScrollLink>
           </div>
 
-          <div className="relative h-full w-full">
+          <div className="relative h-[40%] w-full md:h-full">
             <Image
-              src="/hero.png"
+              src="/itysltt.png"
               alt="Hero Image"
               fill
               className="object-cover"
@@ -127,6 +133,7 @@ export default function Home() {
         <ProcessSection />
         {/* <TestimonialsSection /> */}
         <ClosingSection />
+        <CTA />
       </section>
     </ReactLenis>
   );

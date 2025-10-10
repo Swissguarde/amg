@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import Lenis from "lenis";
+import Link from "next/link";
 import { useEffect } from "react";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
@@ -81,9 +82,9 @@ export default function ClosingSection() {
   }, []);
 
   return (
-    <div className="mt-20">
-      <section className="hero relative flex h-screen w-screen items-center justify-center overflow-hidden p-[2rem]">
-        <h1 className="max-w-4xl text-center text-5xl leading-15 text-gray-700">
+    <div className="hidden md:block">
+      <section className="relative flex h-screen w-screen items-center justify-center overflow-hidden p-[2rem]">
+        <h1 className="text-center text-2xl leading-10 text-gray-700 md:max-w-4xl md:text-5xl md:leading-15">
           At The Ace Media Group, we believe innovation should feel effortless.
           Our goal is to merge creativity and technology to create meaningful
           digital experiences—ones that inspire, connect, and drive real growth
@@ -104,7 +105,7 @@ export default function ClosingSection() {
           </h1>
         </div>
       </section> */}
-      <section className="work-item relative h-[150vh] w-screen overflow-hidden">
+      <section className="work-item ] relative h-[150vh] w-screen overflow-hidden">
         <div className="work-item-img">
           <img
             src="/about-a.jpg"
@@ -114,12 +115,9 @@ export default function ClosingSection() {
         </div>
         <div className="work-item-name">
           <h1 className="text-center font-mono text-5xl font-bold text-gray-600 uppercase">
-            Adaptability | Collaboration | Excellence
+            High Impact
           </h1>
         </div>
-      </section>
-      <section className="outro relative flex h-screen w-screen items-center justify-center overflow-hidden p-[2rem]">
-        back to base
       </section>
     </div>
   );
