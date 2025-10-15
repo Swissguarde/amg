@@ -119,7 +119,7 @@ export default function Home() {
 
           <div className="relative h-[40%] w-full md:h-full">
             <Image
-              src="/itysltt.png"
+              src="/itysltt/slide-1.png"
               alt="Hero Image"
               fill
               className="object-cover"
