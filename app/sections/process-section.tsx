@@ -37,7 +37,7 @@ export default function ProcessSection() {
         </p>
 
         <Link
-          href="/"
+          href="/about"
           className="relative mt-8 flex items-center gap-2 underline underline-offset-8 lg:mt-20"
         >
           <span className="font-mono text-sm lg:text-base">

@@ -40,7 +40,7 @@ export default function Header() {
           className="flex h-full items-center justify-center border-[#B9BDAB] px-4 md:border-r"
         >
           <Image
-            src="/signature.svg"
+            src="/logo.png"
             alt="Ace Media Group"
             width={100}
             height={200}
@@ -130,14 +130,14 @@ export default function Header() {
           isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <div className="flex items-center justify-between border-b border-[#B9BDAB]/30 p-6">
+        <div className="flex items-center justify-between border-[#B9BDAB]/30 p-6">
           <Link
             href="/"
             onClick={closeMobileMenu}
             className="flex items-center"
           >
             <Image
-              src="/signature.svg"
+              src="/logo.png"
               alt="Ace Media Group"
               width={80}
               height={40}
@@ -218,7 +218,7 @@ export default function Header() {
 const links = [
   {
     label: "Work",
-    description: "Projects (08)",
+    description: "Projects",
     href: "/works",
   },
   {

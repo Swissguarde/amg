@@ -11,11 +11,12 @@ export default function Footer() {
         {/* Signature / logo */}
         <div className="col-span-1 flex items-center justify-center py-16 lg:col-span-8 lg:py-28">
           <Image
-            src="/signature.svg"
-            alt="Signature"
-            width={720}
-            height={240}
-            className="h-auto w-[70%] max-w-[780px] opacity-90"
+            src="/logo.png"
+            alt="Ace Media Group Logo"
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="size-25 object-contain md:size-50"
             priority
           />
         </div>
@@ -51,10 +52,10 @@ export default function Footer() {
             Contact
           </h4>
           <a
-            href="mailto:acemediagrouo@gmail.com"
+            href="mailto:theacemedia1@gmail.com"
             className="text-lg break-all underline-offset-4 hover:underline sm:text-2xl"
           >
-            acemediagroup@gmail.com
+            theacemedia1@gmail.com
           </a>
         </div>
 
@@ -99,7 +100,7 @@ export default function Footer() {
           <ul className="space-y-4">
             <li>
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/theacemediagroup_1"
                 target="_blank"
                 rel="noreferrer noopener"
                 className="underline-offset-4 hover:underline"
@@ -107,27 +108,19 @@ export default function Footer() {
                 Instagram
               </a>
             </li>
-            <li>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="underline-offset-4 hover:underline"
-              >
-                Linkedin
-              </a>
-            </li>
           </ul>
         </div>
 
-        {/* Others */}
         <div className="flex flex-col justify-between p-8 sm:p-10">
           <div>
             <h4 className="mb-10 flex items-center gap-2 text-sm tracking-wider text-[#9b938b]">
               <span className="inline-block size-1.5 rounded-full bg-[#9b938b]" />{" "}
               Others
             </h4>
-            <Link href="#" className="w-fit underline-offset-4 hover:underline">
+            <Link
+              href="/privacy-policy"
+              className="w-fit underline-offset-4 hover:underline"
+            >
               Privacy Policy
             </Link>
           </div>

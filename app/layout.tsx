@@ -11,7 +11,7 @@ const newsreader = Newsreader({
 });
 
 export const metadata: Metadata = {
-  title: "Ace Media Group",
+  title: "The Ace Media Group",
   description: "Powering Digital Success",
 };
 

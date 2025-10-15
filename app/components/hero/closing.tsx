@@ -83,7 +83,7 @@ export default function ClosingSection() {
 
   return (
     <div className="hidden md:block">
-      <section className="relative flex h-screen w-screen items-center justify-center overflow-hidden p-[2rem]">
+      <section className="relative flex h-full w-full items-center justify-center overflow-hidden p-[2rem]">
         <h1 className="text-center text-2xl leading-10 text-gray-700 md:max-w-4xl md:text-5xl md:leading-15">
           At The Ace Media Group, we believe innovation should feel effortless.
           Our goal is to merge creativity and technology to create meaningful
@@ -91,20 +91,7 @@ export default function ClosingSection() {
           for modern brands.
         </h1>
       </section>
-      {/* <section className="work-item relative h-[150vh] w-screen overflow-hidden">
-        <div className="work-item-img">
-          <img
-            src="/about-b.jpg"
-            alt=""
-            className="h-full w-full object-cover"
-          />
-        </div>
-        <div className="work-item-name">
-          <h1 className="text-center text-7xl font-bold text-white uppercase">
-            ACE MEDIA GROUP
-          </h1>
-        </div>
-      </section> */}
+
       <section className="work-item ] relative h-[150vh] w-screen overflow-hidden">
         <div className="work-item-img">
           <img

@@ -187,7 +187,7 @@ export default function WorkSection() {
             .map((w, i, array) => (
               <Link
                 key={i}
-                href={`/works/${w.slug}`}
+                href="/works"
                 className={`group relative mt-18 flex-shrink-0 border-l border-[#B9BDAB] pt-6 transition-all duration-500 ease-in-out hover:text-white md:mt-0 md:h-screen md:pt-24 ${
                   i === array.length - 1
                     ? "w-screen md:w-[30vw]"
@@ -196,24 +196,24 @@ export default function WorkSection() {
               >
                 <div
                   style={{ backgroundImage: `url(${w.bg})` }}
-                  className="absolute inset-0 hidden bg-cover bg-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 md:block"
+                  className="absolute inset-0 bg-cover bg-center opacity-100 md:opacity-0 md:transition-opacity md:duration-500 md:group-hover:opacity-100"
                 />
 
                 {/* Dark Overlay */}
-                <div className="absolute inset-0 hidden bg-black opacity-0 transition-opacity duration-500 group-hover:opacity-50 md:block" />
+                <div className="absolute inset-0 bg-black opacity-50 md:opacity-0 md:transition-opacity md:duration-500 md:group-hover:opacity-50" />
 
                 {/* Content */}
                 <div className="relative z-10 flex h-full flex-col justify-between p-4 md:p-0">
-                  <h2 className="text-[120px] leading-none md:text-[250px]">
+                  <h2 className="text-[120px] leading-none text-white group-hover:text-white sm:text-gray-700 md:text-[250px]">
                     {i + 1}
                   </h2>
 
                   <div className="flex flex-1 flex-col justify-center md:block md:text-left">
-                    <p className="text-2xl leading-tight text-gray-700 group-hover:text-white md:p-8 md:text-6xl md:leading-20">
+                    <p className="text-2xl leading-tight text-white group-hover:text-white sm:text-gray-700 md:p-8 md:text-6xl md:leading-20">
                       {w.title}
                     </p>
 
-                    <p className="text-sm leading-relaxed md:p-8 md:text-base">
+                    <p className="text-sm leading-relaxed text-white group-hover:text-white sm:text-gray-700 md:p-8 md:text-base">
                       {w.desc}
                     </p>
                   </div>
