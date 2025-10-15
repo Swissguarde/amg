@@ -2,13 +2,14 @@ import ProjectDetail from "@/app/components/project-detail";
 import { getProjectById } from "@/lib/projects";
 
 interface WorkDetailPageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
-export default function WorkDetailPage({ params }: WorkDetailPageProps) {
-  const project = getProjectById(params.id);
+export default async function WorkDetailPage({ params }: WorkDetailPageProps) {
+  const { id } = await params;
+  const project = getProjectById(id);
 
   if (!project) {
     return (
