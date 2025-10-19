@@ -1,14 +1,13 @@
-import Image from "next/image";
-import PageSectionNav from "../components/navigation/page-section-nav";
-import Link from "next/link";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { getAllProjects } from "@/lib/projects";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function WorksPage() {
   return (
     <div className="w-full px-4 py-10 md:px-8 md:py-20">
       <Tabs defaultValue="uxui" className="w-full">
-        <TabsList className="mb-10 grid h-24 w-full grid-cols-2 gap-3 border border-[#B9BDAB] md:grid-cols-4">
+        <TabsList className="mb-10 grid h-24 w-full grid-cols-2 gap-3 border border-[#151146]/20 md:grid-cols-4">
           <TabsTrigger value="brand">Brand Design</TabsTrigger>
           <TabsTrigger value="uxui">UX/UI Design</TabsTrigger>
           <TabsTrigger value="webapp">Web & App Development</TabsTrigger>
@@ -16,34 +15,18 @@ export default function WorksPage() {
         </TabsList>
 
         <TabsContent value="uxui">
-          <p className="mt-4 text-sm text-gray-600 md:text-base">
-            Interfaces that feel effortless and look stunning. We design
-            intuitive flows and pixel-perfect UI.
-          </p>
           <ServiceProjectsGrid serviceKey="uxui" />
         </TabsContent>
 
         <TabsContent value="brand">
-          <p className="mt-4 text-sm text-gray-600 md:text-base">
-            Cohesive brand systems that communicate clearly and stand out across
-            every touchpoint.
-          </p>
           <ServiceProjectsGrid serviceKey="brand" />
         </TabsContent>
 
         <TabsContent value="webapp">
-          <p className="mt-4 text-sm text-gray-600 md:text-base">
-            High-performing web and mobile experiences engineered for speed,
-            accessibility, and scale.
-          </p>
           <ServiceProjectsGrid serviceKey="webapp" />
         </TabsContent>
 
         <TabsContent value="social">
-          <p className="mt-4 text-sm text-gray-600 md:text-base">
-            Strategy-led content and community building to grow your brand and
-            engagement.
-          </p>
           <ServiceProjectsGrid serviceKey="social" />
         </TabsContent>
       </Tabs>

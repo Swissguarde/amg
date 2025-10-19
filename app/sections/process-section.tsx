@@ -3,13 +3,13 @@ import Link from "next/link";
 export default function ProcessSection() {
   return (
     <section className="flex min-h-screen flex-col items-center justify-between px-4 py-16 lg:flex-row lg:px-8 lg:py-0">
-      <div className="order-2 w-full border-t border-[#B9BDAB]/60 lg:order-1 lg:w-auto">
+      <div className="order-2 w-full border-t border-[#151146]/60 lg:order-1 lg:w-auto">
         {process.map((item, index) => (
           <div
             key={index}
-            className="my-4 flex items-center gap-4 border-b border-[#B9BDAB]/60 pb-3 lg:my-6 lg:gap-10"
+            className="my-4 flex items-center gap-4 border-b border-[#151146]/60 pb-3 lg:my-6 lg:gap-10"
           >
-            <div className="flex size-5 flex-shrink-0 items-center justify-center rounded-full bg-[#B9BDAB] text-center text-sm text-white lg:text-base">
+            <div className="flex size-5 flex-shrink-0 items-center justify-center rounded-full bg-[#151146] text-center text-sm text-white lg:text-base">
               {index + 1}
             </div>
             <h2 className="text-base lg:text-xl">{item}</h2>
@@ -19,7 +19,7 @@ export default function ProcessSection() {
 
       <div className="order-1 max-w-xl lg:order-2">
         <div className="flex items-center gap-2">
-          <div className="size-2 animate-pulse rounded-full bg-[#D5C8B0]" />
+          <div className="size-2 animate-pulse rounded-full bg-[#151146]" />
           <p className="text-sm font-medium tracking-wider text-gray-600 lg:text-base">
             From idea to impact
           </p>

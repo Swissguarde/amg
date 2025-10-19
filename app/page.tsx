@@ -80,13 +80,13 @@ export default function Home() {
   return (
     <ReactLenis root>
       <section>
-        <div className="relative flex h-screen w-full flex-col bg-[#D5C8B0] md:grid md:grid-cols-[6fr_4fr] md:gap-4">
+        <div className="relative flex h-screen w-full flex-col bg-[#151146] text-white md:grid md:grid-cols-[6fr_4fr] md:gap-4">
           <div className="flex h-[60%] flex-col items-start justify-center gap-10 p-8 md:h-full">
-            <h2 className="text-4xl text-gray-800 md:max-w-2xl md:text-7xl md:leading-16">
+            <h2 className="text-4xl md:max-w-2xl md:text-7xl md:leading-16">
               Crafting digital experiences that attract, convert, and grow your
               business
             </h2>
-            <p className="text-gray-600 md:max-w-2xl">
+            <p className="text-white/80 md:max-w-2xl">
               We specialize in bespoke UX/UI design, branding, and blending
               artistry with innovation to craft scalable, impactful designs that
               resonate with users and grow with the business
@@ -97,7 +97,7 @@ export default function Home() {
                 ref={scrollLinkRef}
                 className="flex cursor-pointer items-center gap-2 underline underline-offset-6"
               >
-                <h2 className="text-md text-gray-600">Scroll for more</h2>
+                <h2 className="text-md text-white/80">Scroll for more</h2>
                 <svg
                   ref={arrowRef}
                   xmlns="http://www.w3.org/2000/svg"

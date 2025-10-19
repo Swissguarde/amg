@@ -114,7 +114,7 @@ export default function PageTransition({
       .to(
         logoRef.current?.querySelector("path") as SVGPathElement,
         {
-          fill: "#e3e4d8",
+          fill: "#151146",
           duration: 1,
           ease: "power2.inOut",
         },

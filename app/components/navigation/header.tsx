@@ -32,12 +32,12 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 z-50 flex h-18 w-screen items-center justify-between border-b border-[#B9BDAB] ${isHomepage && !isScrolled ? "bg-[#D5C8B0]" : "bg-white"}`}
+        className={`fixed top-0 z-50 flex h-18 w-screen items-center justify-between border-b text-white ${isHomepage && !isScrolled ? "border-white/20 bg-[#151146]" : "border-[#151146]/20 bg-white text-[#151146]"}`}
       >
         {/* Logo */}
         <Link
           href="/"
-          className="flex h-full items-center justify-center border-[#B9BDAB] px-4 md:border-r"
+          className={`flex h-full items-center justify-center ${isHomepage && !isScrolled ? "border-white/20 px-4 md:border-r" : "border-[#151146]/20 px-4 md:border-r"}`}
         >
           <Image
             src="/logo.png"
@@ -49,24 +49,32 @@ export default function Header() {
         </Link>
 
         <div className="hidden w-full px-10 text-start md:block">
-          <h2 className="text-xs font-medium text-gray-600">
+          <h2 className="text-xs font-medium">
             The Ace Media Group. <br /> A design studio powering digital
             success.
           </h2>
         </div>
 
-        <div className="hidden h-full items-center border-l border-[#B9BDAB] lg:flex">
+        <div
+          className={`hidden h-full items-center ${isHomepage && !isScrolled ? "border-l border-white/20" : "border-l border-[#151146]/20"} lg:flex`}
+        >
           {links.map(({ description, href, label }, i) => (
             <Link
               key={i}
               href={href}
-              className="flex h-full flex-col justify-center gap-2 border-r border-[#B9BDAB] px-4"
+              className="flex h-full flex-col justify-center gap-2 border-r border-white/20 px-4"
             >
-              <span className="text-[10px] font-medium text-gray-500">
+              <span
+                className={`text-[10px] font-medium ${isHomepage && !isScrolled ? "text-white" : "text-gray-600"}`}
+              >
                 {description}
               </span>
               <div className="flex items-center gap-12">
-                {label}
+                <span
+                  className={`text-sm font-medium ${isHomepage && !isScrolled ? "text-white" : "text-gray-600"}`}
+                >
+                  {label}
+                </span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -88,7 +96,7 @@ export default function Header() {
 
         <button
           onClick={toggleMobileMenu}
-          className="flex h-full items-center justify-center border-l border-[#B9BDAB] px-4 lg:hidden"
+          className="flex h-full items-center justify-center border-l border-white/20 px-4 lg:hidden"
           aria-label="Toggle mobile menu"
         >
           {isMobileMenuOpen ? (
@@ -126,11 +134,11 @@ export default function Header() {
       </header>
 
       <div
-        className={`fixed top-0 right-0 left-0 z-40 h-[80vh] bg-[#D5C8B0] transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 left-0 z-40 h-[80vh] bg-[#151146] transition-transform duration-300 ease-in-out ${
           isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <div className="flex items-center justify-between border-[#B9BDAB]/30 p-6">
+        <div className="border-white/20/30 flex items-center justify-between p-6">
           <Link
             href="/"
             onClick={closeMobileMenu}
@@ -169,17 +177,17 @@ export default function Header() {
 
         <div className="space-y-0 px-6 py-8">
           {links.map(({ description, href, label }, i) => (
-            <div key={i} className="border-b border-[#B9BDAB]/30 py-6">
+            <div key={i} className="border-white/20/30 border-b py-6">
               <Link
                 href={href}
                 onClick={closeMobileMenu}
                 className="group flex items-center justify-between"
               >
                 <div className="flex flex-col">
-                  <span className="mb-1 text-sm font-medium text-gray-600">
+                  <span className="mb-1 text-sm font-medium">
                     {description}
                   </span>
-                  <span className="text-2xl font-semibold text-gray-800 transition-colors group-hover:text-gray-600">
+                  <span className="group-hover: text-2xl font-semibold text-gray-800 transition-colors">
                     {label}
                   </span>
                 </div>
@@ -201,11 +209,11 @@ export default function Header() {
           ))}
         </div>
         <div className="absolute right-0 bottom-0 left-0 p-6">
-          <p className="mb-4 text-center text-sm text-gray-600">
+          <p className="mb-4 text-center text-sm">
             A bespoke UX-driven design studio blending elegance and
             functionality
           </p>
-          <div className="flex justify-between text-xs text-gray-600">
+          <div className="flex justify-between text-xs">
             <span>info@acemediagroup.com</span>
             <span>2025 Ace Media Group ©</span>
           </div>

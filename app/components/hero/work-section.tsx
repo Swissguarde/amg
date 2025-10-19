@@ -75,7 +75,7 @@ export default function WorkSection() {
   ];
 
   return (
-    <section ref={wrapperRef} className="relative border-b border-[#B9BDAB]">
+    <section ref={wrapperRef} className="relative border-b border-[#151146]/20">
       <div className="sticky top-0 h-screen overflow-hidden">
         <div
           ref={trackRef}
@@ -96,7 +96,7 @@ export default function WorkSection() {
               <div className="mt-18 flex h-screen flex-col items-start justify-center gap-4 p-4 md:h-full md:gap-10 md:p-8">
                 <div className="flex h-full flex-col justify-evenly p-4 md:justify-between md:p-8">
                   <div className="flex items-center gap-2">
-                    <div className="size-2 animate-pulse rounded-full bg-[#D5C8B0]" />
+                    <div className="size-2 animate-pulse rounded-full bg-[#151146]" />
                     <p className="text-sm font-medium tracking-wider text-gray-600 md:text-base">
                       Our Mission
                     </p>
@@ -188,7 +188,7 @@ export default function WorkSection() {
               <Link
                 key={i}
                 href="/works"
-                className={`group relative mt-18 flex-shrink-0 border-l border-[#B9BDAB] pt-6 transition-all duration-500 ease-in-out hover:text-white md:mt-0 md:h-screen md:pt-24 ${
+                className={`group relative mt-18 flex-shrink-0 border-l border-[#151146]/20 pt-6 transition-all duration-500 ease-in-out hover:text-white md:mt-0 md:h-screen md:pt-24 ${
                   i === array.length - 1
                     ? "w-screen md:w-[30vw]"
                     : "w-[80vw] md:w-[30vw]"

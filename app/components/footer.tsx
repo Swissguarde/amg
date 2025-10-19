@@ -5,9 +5,9 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#f5eee6] text-[#1f1f1f]">
+    <footer className="bg-white text-[#151146]">
       {/* Top section: signature on left, numbered nav on right */}
-      <div className="grid grid-cols-1 border-t border-[#e7dfd7] lg:grid-cols-12">
+      <div className="grid grid-cols-1 border-t border-[#e9ecef] lg:grid-cols-12">
         {/* Signature / logo */}
         <div className="col-span-1 flex items-center justify-center py-16 lg:col-span-8 lg:py-28">
           <Image
@@ -22,7 +22,7 @@ export default function Footer() {
         </div>
 
         {/* Numbered navigation */}
-        <nav className="col-span-1 divide-y divide-[#e7dfd7] border-l border-[#e7dfd7] lg:col-span-4">
+        <nav className="col-span-1 divide-y divide-[#e9ecef] border-l border-[#e9ecef] lg:col-span-4">
           {[
             { no: "01.", label: "Home", href: "/" },
             { no: "02.", label: "About", href: "/about" },
@@ -32,9 +32,9 @@ export default function Footer() {
             <Link
               key={item.no}
               href={item.href}
-              className="group grid grid-cols-[auto_1fr] items-center gap-6 p-8 transition-colors hover:bg-[#f2e8de] sm:p-10"
+              className="group grid grid-cols-[auto_1fr] items-center gap-6 p-8 transition-colors hover:bg-[#f8f9fa] sm:p-10"
             >
-              <span className="text-sm tracking-wider text-[#9b938b]">
+              <span className="text-sm tracking-wider text-[#6c757d]">
                 {item.no}
               </span>
               <span className="text-2xl sm:text-3xl">{item.label}</span>
@@ -44,11 +44,11 @@ export default function Footer() {
       </div>
 
       {/* Bottom section: 4 columns */}
-      <div className="grid grid-cols-1 divide-y divide-[#e7dfd7] border-t border-[#e7dfd7] md:grid-cols-2 md:divide-y-0 lg:grid-cols-4 lg:divide-x">
+      <div className="grid grid-cols-1 divide-y divide-[#e9ecef] border-t border-[#e9ecef] md:grid-cols-2 md:divide-y-0 lg:grid-cols-4 lg:divide-x">
         {/* Contact */}
         <div className="p-8 sm:p-10">
-          <h4 className="mb-10 flex items-center gap-2 text-sm tracking-wider text-[#9b938b]">
-            <span className="inline-block size-1.5 rounded-full bg-[#9b938b]" />{" "}
+          <h4 className="mb-10 flex items-center gap-2 text-sm tracking-wider text-[#6c757d]">
+            <span className="inline-block size-1.5 rounded-full bg-[#6c757d]" />{" "}
             Contact
           </h4>
           <a
@@ -61,25 +61,25 @@ export default function Footer() {
 
         {/* Subscribe */}
         <div className="p-8 sm:p-10">
-          <h4 className="mb-10 flex items-center gap-2 text-sm tracking-wider text-[#9b938b]">
-            <span className="inline-block size-1.5 rounded-full bg-[#9b938b]" />{" "}
+          <h4 className="mb-10 flex items-center gap-2 text-sm tracking-wider text-[#6c757d]">
+            <span className="inline-block size-1.5 rounded-full bg-[#6c757d]" />{" "}
             Subscribe
           </h4>
           <form
-            className="flex max-w-md items-center gap-3 border-b border-[#cfc7bf]"
+            className="flex max-w-md items-center gap-3 border-b border-[#e9ecef]"
             onSubmit={(e) => e.preventDefault()}
           >
             <input
               type="email"
               placeholder="Enter your email"
-              className="w-full bg-transparent py-3 outline-none placeholder:text-[#9b938b]"
+              className="w-full bg-transparent py-3 outline-none placeholder:text-[#6c757d]"
               aria-label="Email address"
               required
             />
             <button
               type="submit"
               aria-label="Subscribe"
-              className="rounded-full p-2 transition-colors hover:bg-[#efe7df]"
+              className="rounded-full p-2 transition-colors hover:bg-[#f8f9fa]"
             >
               <span
                 aria-hidden
@@ -93,8 +93,8 @@ export default function Footer() {
 
         {/* Connect */}
         <div className="p-8 sm:p-10">
-          <h4 className="mb-10 flex items-center gap-2 text-sm tracking-wider text-[#9b938b]">
-            <span className="inline-block size-1.5 rounded-full bg-[#9b938b]" />{" "}
+          <h4 className="mb-10 flex items-center gap-2 text-sm tracking-wider text-[#6c757d]">
+            <span className="inline-block size-1.5 rounded-full bg-[#6c757d]" />{" "}
             Connect
           </h4>
           <ul className="space-y-4">
@@ -113,8 +113,8 @@ export default function Footer() {
 
         <div className="flex flex-col justify-between p-8 sm:p-10">
           <div>
-            <h4 className="mb-10 flex items-center gap-2 text-sm tracking-wider text-[#9b938b]">
-              <span className="inline-block size-1.5 rounded-full bg-[#9b938b]" />{" "}
+            <h4 className="mb-10 flex items-center gap-2 text-sm tracking-wider text-[#6c757d]">
+              <span className="inline-block size-1.5 rounded-full bg-[#6c757d]" />{" "}
               Others
             </h4>
             <Link
@@ -124,7 +124,7 @@ export default function Footer() {
               Privacy Policy
             </Link>
           </div>
-          <p className="mt-12 text-sm text-[#9b938b]">
+          <p className="mt-12 text-sm text-[#6c757d]">
             2025 Made in Ace Media Group ©
           </p>
         </div>

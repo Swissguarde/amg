@@ -76,7 +76,7 @@ export default function CTA() {
           </Link>
         </div>
 
-        <div className="absolute top-0 right-0 h-full w-px bg-[#B9BDAB]/60" />
+        <div className="absolute top-0 right-0 h-full w-px bg-[#151146]/60" />
       </div>
 
       <div className="hidden flex-1 pl-8 md:block">
