@@ -1,10 +1,11 @@
 import Image from "next/image";
 
-export default function PaymentSuccessPage({
-  searchParams: { amount },
+export default async function PaymentSuccessPage({
+  searchParams,
 }: {
-  searchParams: { amount: string };
+  searchParams: Promise<{ amount: string }>;
 }) {
+  const { amount } = await searchParams;
   return (
     <div className="relative min-h-screen w-full">
       {/* Background Image */}
