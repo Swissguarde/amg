@@ -1,10 +1,12 @@
 import Image from "next/image";
 
+interface PaymentSuccessPageProps {
+  searchParams: Promise<{ amount: string }>;
+}
+
 export default async function PaymentSuccessPage({
   searchParams,
-}: {
-  searchParams: Promise<{ amount: string }>;
-}) {
+}: PaymentSuccessPageProps) {
   const { amount } = await searchParams;
   return (
     <div className="relative min-h-screen w-full">
