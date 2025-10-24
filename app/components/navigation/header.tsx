@@ -62,7 +62,7 @@ export default function Header() {
             <Link
               key={i}
               href={href}
-              className="flex h-full flex-col justify-center gap-2 border-r border-white/20 px-4"
+              className={`flex h-full flex-col justify-center gap-2 border-r px-4 ${isHomepage && !isScrolled ? "border-white/20" : "border-[#151146]/20"}`}
             >
               <span
                 className={`text-[10px] font-medium ${isHomepage && !isScrolled ? "text-white" : "text-gray-600"}`}
@@ -187,12 +187,12 @@ export default function Header() {
                   <span className="mb-1 text-sm font-medium">
                     {description}
                   </span>
-                  <span className="group-hover: text-2xl font-semibold text-gray-800 transition-colors">
+                  <span className="group-hover: text-2xl font-semibold text-white transition-colors sm:text-gray-800">
                     {label}
                   </span>
                 </div>
                 <svg
-                  className="h-5 w-5 text-gray-700 transition-transform group-hover:translate-x-1"
+                  className="h-5 w-5 text-white transition-transform group-hover:translate-x-1 sm:text-gray-700"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"

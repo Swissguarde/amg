@@ -125,7 +125,7 @@ export default function Footer() {
             </Link>
           </div>
           <p className="mt-12 text-sm text-[#6c757d]">
-            2025 Made in Ace Media Group ©
+            All rights reserved © Ace Media Group {new Date().getFullYear()}
           </p>
         </div>
       </div>
